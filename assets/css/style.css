@@ -51,8 +51,10 @@ margin-bottom: 20px;
 html, body { height: 100%; }
 
 body {
-	font:16px/1 "Helvetica Neue", Helvetica, Arial, sans-serif;
-	color: #666;
+	/*font:16px/1 "Avenir", Helvetica, Arial, sans-serif;*/
+	font:16px/1 "Avenir", Avenir, sans-serif;
+	color: #444;
+	/*background-color: #ecf0f1;*/
 	-webkit-font-smoothing: antialiased;
 	text-rendering: optimizeLegibility;
 }
@@ -61,17 +63,17 @@ h1 {
 	font-size: 30px;
 	letter-spacing: -1px;
 	color: #222;
-	font-weight: bold;
+	font-weight: lighter;
 }
 
 h2 {
 	font: italic 19px/1.3em Georgia,serif;
-	color: #bbb;
+	color: #999;
 }
 
 .profile #wrapper {
 	padding: 100px 40px 0px;
-	max-width: 600px;
+	max-width: 700px;
 	margin: 0 auto;
 }
 
@@ -85,8 +87,8 @@ h2 {
 
 .profile #avatar {
 	display: inline-block;
-	width: 80px;
-	height: 80px;
+	width: 180px;
+	height: 180px;
 	border-radius: 50%;
 	margin-bottom: 20px;
 }
@@ -101,20 +103,20 @@ h2 {
 .profile h2 {
 	font-size: 20px;
 	  font-weight: 300;
-	  color: #aaa;
+	  color: #888;
 	  margin-top: 10px;
-	  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	  font-family: 'Avenir';
+	  /*font-family: 'Avenir', Helvetica, Arial, sans-serif;*/
 	  font-style: normal;
-
 }
 
 nav.main-nav {
-	padding: 20px 20px 0;
-
+	padding: 20px 20px 20px;
 	/*max-width: 600px;*/
 	/*width:100%;*/
-	background: #fff;
-	background: rgba(255,255,255,.90);
+	background: #F5F5F5;
+	border-bottom: 1px solid rgba(0,0,0,.1);
+	/*background: rgba(255,255,255,.80);*/
 	margin: 0 auto;
 	text-align: right;
 	/*position: fixed;*/
@@ -126,26 +128,79 @@ nav.main-nav a {
 	right: 6px;
 	padding: 8px 12px;
 	color: #5badf0;
-	font-size: 13px;
+	font-size: 15px;
 	/*font-weight: bold;*/
 	line-height: 1.35;
 	border-radius: 3px;
-
 }
+
+nav.main-nav a:hover {
+	top: 8px;
+	right: 6px;
+	padding: 8px 12px;
+	color: #fff;
+	background: #5badf0;
+	font-size: 15px;
+	/*font-weight: bold;*/
+	line-height: 1.35;
+	border-radius: 3px;
+}
+
 nav.main-nav a.cta {
 	background: #5badf0;
 	color: #fff;
 	margin-left: 12px;
 }
 
+nav.main-nav li {
+
+	display: inline;
+	border-right: 4px solid transparent;
+	border-left: 4px solid transparent;
+
+}
+
+nav.main-nav li.left {
+
+	display: inline;
+	float: left;
+	border-right: 4px solid transparent;
+	border-left: 4px solid transparent;
+
+}
+
+div.social a {
+	top: 8px;
+	right: 6px;
+	padding: 8px 12px;
+	color: #5badf0;
+	font-size: 15px;
+	/*font-weight: bold;*/
+	line-height: 1.35;
+	border-radius: 3px;
+
+}
+
+div.social a.cta {
+	background: #5badf0;
+	color: #fff;
+	margin-left: 12px;
+}
+
+div.social a.cta:hover {
+	background: #fff;
+	color: #5badf0;
+	margin-left: 12px;
+}
+
 #wrapper {
-  max-width: 600px;
+  max-width: 700px;
   margin: 0 auto;
   padding: 60px 40px 100px 40px;
 }
 
 #wrapper.home {
-	max-width: 600px;
+	max-width: 700px;
 	margin: 0 auto;
 	padding: 0px 40px 20px 40px;
 }
@@ -204,44 +259,49 @@ em, i { font-style: italic; }
 .description {
 	float: right;
 	font: italic 14px/1.4em Georgia,serif;
-	color: #aaa;
+	color: #888;
 }
 
-
+/*These are used to change the About md style as well*/
 
 .home h1 {
+	font-family: "Avenir"
 	font-size: 30px;
-	letter-spacing: -1px;
-	color: #222;
-	font-weight: bold;
+	border-bottom: 10px solid transparent;
+	/*letter-spacing: -1px;*/
+	color: #333;
+	font-weight: normal;
 }
 
 .home h2 {
-	font: italic 19px/1.3em Georgia,serif;
-	color: #bbb;
+	font: 23px/1.3em "Avenir";
+	color: #444;
+}
+
+.home a:hover {
+	text-decoration: underline;
 }
 
 .post header {
 	text-align:center;
-
 }
 
 .post h1 {
 	margin-bottom:2 0px;
 	color: #222;
-	font: 300 32px/1.4em "Helvetica Neue", Helvetica,Arial,sans-serif;
+	font: 300 32px/1.4em "Avenir", Helvetica,Arial,sans-serif;
 }
 
 .post h2 {
 	margin-bottom: 40px;
-	  font: 300 24px/1.5 "Helvetica Neue",Helvetica,Arial,sans-serif;
+	  font: 300 24px/1.5 "Avenir",Helvetica,Arial,sans-serif;
 	  color: #111;
 }
 
 
 .post h2.headline {
 	/*font: italic 22px/1.3em Georgia,serif;*/
-	font: normal 13px/1.5em "Helvetica Neue",Helvetica,Arial,sans-serif;
+	font: normal 13px/1.5em "Avenir",Helvetica,Arial,sans-serif;
 	margin: -5px 0 40px 0;
 	color: #b2b9be;
 	  font-size: 13px;
@@ -252,8 +312,8 @@ em, i { font-style: italic; }
 }
 
 #post-list h2 {
-	font: normal 17px/1.5em "Helvetica Neue",Helvetica,Arial,sans-serif;
-	color: #aaa;
+	font: normal 17px/1.5em "Avenir",Helvetica,Arial,sans-serif;
+	color: #888;
 	max-width: 400px;
 	margin-top: 2px;
 }
@@ -390,15 +450,15 @@ Post List
 #post-list a {
 	color: #333;
 	display: block;
-	font: bold 19px/1.7 "Helvetica Neue",helvetica,Arial,sans-serif;
+	font: bold 23px/1.7 "Avenir",helvetica,Arial,sans-serif;
 }
 
 #post-list .dates {
 	float: right;
 	position: relative;
 	top: 1px;
-	font: 300 17px/1.8 "Helvetica Neue",helvetica,Arial,sans-serif;
-	color: #bbb;
+	font: 300 21px/1.8 "Avenir",helvetica,Arial,sans-serif;
+	color: #999;
 }
 
 #post-list-footer {
@@ -457,7 +517,7 @@ Post List
 }
 
 #post-meta div span {
-	color: #aaa;
+	color: #888;
 	font-weight: 500;
 	display: block;
 }
@@ -547,7 +607,7 @@ h1.archive {
 
 h2.month {
 	width: 100%;
-	font: bold 13px/1 "Helvetica Neue",helvetica,Arial,sans-serif;
+	font: bold 13px/1 "Avenir",helvetica,Arial,sans-serif;
 	text-transform: uppercase;
 	margin-top: 40px;
 	margin-bottom: 10px;
@@ -561,7 +621,7 @@ h2.month {
 
 #archive-list a {
 	display: block;
-	font: bold 17px/1.7 "Helvetica Neue",helvetica,Arial,sans-serif;
+	font: bold 17px/1.7 "Avenir",helvetica,Arial,sans-serif;
 	color: #333;
 }
 
@@ -569,7 +629,7 @@ h2.month {
 	float: right;
 	position: relative;
 	top: 1px;
-	font: 300 17px/1.7 "Helvetica Neue",helvetica,Arial,sans-serif;
+	font: 300 17px/1.7 "Avenir",helvetica,Arial,sans-serif;
 	color: #bbb;
 }
 
@@ -589,12 +649,12 @@ h2.month {
 
 #post-list.archive.readmore h3{
 
-	  font: 400 20px "Helvetica Neue", Helvetica,Arial,sans-serif;
+	  font: 400 20px "Avenir", Helvetica,Arial,sans-serif;
 	  margin-bottom: 30px;
 }
 
 #post-list.archive.readmore a{
-	font: 400 16px/1.6 "Helvetica Neue",helvetica,Arial,sans-serif;
+	font: 400 16px/1.6 "Avenir",helvetica,Arial,sans-serif;
 	color: #5694f1;
 }
 
@@ -603,7 +663,7 @@ h2.month {
 }
 
 #post-list.archive.readmore .dates{
-	font: 300 16px/1.6 "Helvetica Neue",helvetica,Arial,sans-serif;
+	font: 300 16px/1.6 "Avenir",helvetica,Arial,sans-serif;
 }
 #sharing a.facebook {
   background: #4361b3;
