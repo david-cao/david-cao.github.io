@@ -7,10 +7,22 @@
     <atom:link href="http://dcao96.github.io/feed.xml" rel="self" type="application/rss+xml" />
     
       <item>
+        <title>Introduction</title>
+        
+        
+          <description>&lt;p&gt;To start, I&amp;#39;d just like to share what I&amp;#39;m doing with Go, namely making a basic web server. Go is Google&amp;#39;s new language, and it makes writing web applications super easy, as well as providing incredible scaling. Parse recently &lt;a href=&quot;http://blog.parse.com/learn/how-we-moved-our-api-from-ruby-to-go-and-saved-our-sanity/&quot;&gt;blogged&lt;/a&gt; about how they migrated from Ruby to Go. &lt;/p&gt;
+</description>
+        
+        <pubDate>Tue, 11 Aug 2015 00:00:00 -0400</pubDate>
+        <link>http://dcao96.github.io/2015/website-live/</link>
+        <guid isPermaLink="true">http://dcao96.github.io/2015/website-live/</guid>
+      </item>
+    
+      <item>
         <title>Hello World</title>
         
         
-          <description>&lt;p&gt;This is my first post, and since I&amp;#39;m learning Go, I thought it&amp;#39;d be appropiate to set the tone of this blog with a quick helloworld program in Go!&lt;/p&gt;
+          <description>&lt;p&gt;This is my first post, and tradition suggests that one should start with a salutation to the world. Since I&amp;#39;m learning Go, I thought it&amp;#39;d be appropriate to set the tone of this blog with a quick helloworld program in Go.&lt;/p&gt;
 </description>
         
         <pubDate>Wed, 05 Aug 2015 00:00:00 -0400</pubDate>

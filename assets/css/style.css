@@ -383,6 +383,14 @@ hr {
 
 span.code { font-family:Menlo, Monaco, Courier; background-color:#EEE; font-size:14px; }
 
+code { 
+	font-family:Menlo, Monaco, Courier; 
+	font-size:14px; 
+	color: #96281B; 
+	border-left: solid 2px transparent; 
+	border-right: solid 2px transparent;
+}
+
 pre	{
 	font-family:Menlo, Monaco, Courier;
 	white-space:pre-wrap;
@@ -461,7 +469,7 @@ img {
 Post List
 =========================================== */
 #post-list,#archive-list {
-	margin-top: 100px;
+	margin-top: 50px;
 }
 
 #post-list li,#archive-list li {
@@ -530,7 +538,11 @@ Post List
 }
 
 .post {
-	margin: 80px 0 0 0;
+	margin: 60px 0 0 0;
+}
+
+.post a:hover {
+	text-decoration: underline;
 }
 
 #post-meta {
