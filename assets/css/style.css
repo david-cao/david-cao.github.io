@@ -169,29 +169,58 @@ nav.main-nav li.left {
 
 }
 
+div.social {
+	border-bottom: solid 10px transparent;
+}
+
 div.social a {
-	top: 8px;
-	right: 6px;
-	padding: 8px 12px;
+/*	top: 8px;
+	right: 6px;*/
+/*	padding: 8px 12px;*/
 	color: #5badf0;
-	font-size: 15px;
+	font-size: 50px;
 	/*font-weight: bold;*/
-	line-height: 1.35;
-	border-radius: 3px;
+	/*line-height: 1.35;*/
+	/*border-radius: 3px;*/
 
 }
 
-div.social a.cta {
-	background: #5badf0;
-	color: #fff;
-	margin-left: 12px;
+div.social a.github {
+	/*background: #5badf0;*/
+	color: #333;
+	margin-left: 6px;
+	margin-right: 6px;
 }
 
-div.social a.cta:hover {
-	background: #fff;
-	color: #5badf0;
-	margin-left: 12px;
+div.social a.github:hover {
+	/*background: #fff;*/
+	color: #4379BE;
 }
+
+div.social a.twitter {
+	/*background: #5badf0;*/
+	color: #00aced;
+	margin-left: 6px;
+	margin-right: 6px;
+}
+
+div.social a.twitter:hover {
+	/*background: #fff;*/
+	color: #007ba9;
+}
+
+div.social a.facebook {
+	/*background: #5badf0;*/
+	color: #3b5998;
+	margin-left: 6px;
+	margin-right: 6px;
+}
+
+div.social a.facebook:hover {
+	/*background: #fff;*/
+	color: #283c67;
+}
+
 
 #wrapper {
   max-width: 700px;
@@ -275,6 +304,7 @@ em, i { font-style: italic; }
 
 .home h2 {
 	font: 23px/1.3em "Avenir";
+	border-bottom: 8px solid transparent;
 	color: #444;
 }
 
@@ -491,7 +521,7 @@ Post List
 #footer {
 	box-shadow: inset 0 1px 0 #eee;
 	padding: 40px 0 0 0;
-	margin-top: 100px;
+	margin-top: 40px;
 }
 
 /* Post Page */
