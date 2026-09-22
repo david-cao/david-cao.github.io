@@ -1,0 +1,43 @@
+baseURL = "https://david-cao.github.io/"
+title = "A blog about things"
+languageCode = "en"
+theme = "HugoTeX"
+enableInlineShortcodes = true
+footnoteReturnLinkContents = "^"
+timeZone = "America/New_York"
+
+[pagination]
+  pagerSize = 10
+
+[permalinks]
+  [permalinks.page]
+    post = "/posts/:slug/"
+
+[outputFormats.RSS]
+  baseName = "feed"
+
+[taxonomies]
+  tag = "tags"
+
+[markup]
+  [markup.goldmark.renderer]
+    unsafe = true
+  [markup.goldmark.extensions.passthrough]
+    enable = true
+    [markup.goldmark.extensions.passthrough.delimiters]
+      inline = [['$', '$'], ['\\(', '\\)']]
+      block = [['$$', '$$'], ['\\[', '\\]']]
+  [markup.highlight]
+    style = "paraiso-dark"
+
+[Params]
+  description = "David Cao's personal website and blog."
+  mainSections = ["post"]
+  [Params.Author]
+    name = "David Cao"
+    abstract = ""
+  [Params.Favicon]
+    png = "/touch-icon.png"
+  [Params.SyntaxHighlighting]
+    DarkStyle = "paraiso-dark"
+    LightStyle = "friendly"

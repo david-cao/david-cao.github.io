@@ -1,0 +1,66 @@
+/* Post list: title left, date right */
+.post-preview { margin-bottom: 1.5rem; }
+.post-row {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 1rem;
+}
+.post-row .post-title { margin: 0; }
+.post-row .post-date {
+  flex-shrink: 0;
+  font-variant: small-caps;
+  white-space: nowrap;
+}
+@media (max-width: 480px) {
+  .post-row { flex-direction: column; gap: 0; }
+}
+
+/* Light/dark toggle, fixed top right */
+#theme-toggle {
+  position: fixed;
+  top: 0.75rem;
+  /* Sit just outside the right edge of the 90ch content column; on windows
+     narrower than that, fall back to 0.75rem from the viewport edge. */
+  right: max(0.75rem, calc(50% - 45ch - 2rem));
+  z-index: 100;
+  width: 2.25rem;
+  height: 2.25rem;
+  padding: 0;
+  border: var(--border-width-thin) solid var(--body-color);
+  border-radius: 50%;
+  background: var(--body-bg-color);
+  color: var(--body-color);
+  font: inherit;
+  font-size: 1.1rem;
+  line-height: 1;
+  cursor: pointer;
+}
+#theme-toggle:hover { background: var(--pre-bg-color); }
+#theme-toggle .icon-moon { display: none; }
+/* Show the moon when dark is active, whether forced or from the system */
+.latex-dark #theme-toggle .icon-moon { display: inline; }
+.latex-dark #theme-toggle .icon-sun { display: none; }
+@media (prefers-color-scheme: dark) {
+  .latex-dark-auto #theme-toggle .icon-moon { display: inline; }
+  .latex-dark-auto #theme-toggle .icon-sun { display: none; }
+}
+
+/* Sidenotes on narrow screens: always shown inline instead of hidden behind
+   a click on the number. The theme collapses them below 1050px. */
+@media (max-width: 1050px) {
+  .sidenote,
+  .sidenote-toggle:checked + .sidenote {
+    display: block;
+    margin: 0.5rem 1.25rem 1rem 0.5rem;
+    float: left;
+    left: 1rem;
+    clear: both;
+    width: 95%;
+    text-align: left;
+  }
+  label.sidenote-toggle {
+    cursor: default;
+    pointer-events: none;
+  }
+}

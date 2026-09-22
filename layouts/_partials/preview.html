@@ -1,0 +1,12 @@
+{{/* Site override: title on the left, date on the right, summary below. */}}
+<article class="post-preview">
+  <div class="post-row">
+    <h2 class="post-title"><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
+    <time class="post-date" datetime="{{ .PublishDate.Format "2006-01-02" }}">
+      {{- .PublishDate.Format (.Site.Params.dateformat | default "Jan 2, 2006") -}}
+    </time>
+  </div>
+  {{ if in .RawContent "<!--more-->" }}
+    <div class="post-entry">{{ .Summary }}</div>
+  {{ end }}
+</article>

@@ -1,0 +1,69 @@
+<head>
+<meta charset="utf-8" />
+{{ partial "favicons.html" . }}
+{{ if .Title }}
+  <title>{{ .Title }} - {{ .Site.Title }}</title>
+{{ else }}
+  <title>{{ .Site.Title }}</title>
+{{ end }}
+{{ if .Params.description }}
+  <meta name="description" content="{{ .Params.description }}" />
+{{ else if and .IsPage (in .RawContent "<!--more-->") }}
+  <meta name="description" content="{{ .Summary | plainify }}" />
+{{ else if and .IsHome .Site.Params.Author.abstract }}
+  <meta name="description" content="{{ .Site.Params.Author.abstract | plainify }}" />
+{{ else if .Site.Params.description }}
+  <meta name="description" content="{{ .Site.Params.description }}" />
+{{ end }}
+{{- with .Site.Params.Author.Name }}
+  <meta name="author" content="{{ . }}"/>
+{{- end }}
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+{{ with .Params.relcanonical }}
+<link rel="canonical" href="{{ . }}" itemprop="url" />
+{{ else -}}
+<link rel="canonical" href="{{ .Permalink }}" itemprop="url" />
+{{ end -}}
+{{ if site.Params.twittercard }}
+{{ template "_internal/twitter_cards.html" . }}
+{{- end }}
+{{ if site.Params.opengraph }}
+{{ template "_internal/opengraph.html" . }}
+{{- end }}
+{{ range .AlternativeOutputFormats -}}
+    {{ printf `<link rel="%s" type="%s" href="%s" title="%s" />` .Rel .MediaType.Type .Permalink $.Site.Title | safeHTML }}
+{{ end -}}
+<link rel="preload" href="/css/fonts/LM-bold.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/css/fonts/LM-italic.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/css/fonts/LM-regular.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/css/fonts/LM-bold-italic.woff2" as="font" type="font/woff2" crossorigin>
+{{ with resources.Get "css/latex.css" }}
+<link rel="stylesheet" href="{{ (. | minify).RelPermalink }}">
+{{ end }}
+{{/* Site override: always load KaTeX CSS. The theme only loads it when the
+     render hook has set "hasMath", but that runs after <head> is emitted and
+     misses math inside shortcodes and list-page summaries. */}}
+{{ with resources.Get "css/katex.css" }}
+<link rel="stylesheet" href="{{ (. | minify).RelPermalink }}">
+{{ end }}
+{{ with resources.Get "css/main.css" }}
+<style>{{ (. | minify).Content | safeCSS }}</style>
+{{ end }}
+{{ with resources.Get "css/custom.css" }}
+<style>{{ (. | minify).Content | safeCSS }}</style>
+{{ end }}
+<script>
+  /* Apply a saved light/dark choice before first paint. No choice = follow the system. */
+  (function () {
+    try {
+      var t = localStorage.getItem("theme");
+      if (t === "dark" || t === "light") {
+        document.addEventListener("DOMContentLoaded", function () {
+          document.body.className = t === "dark" ? "latex-dark" : "";
+        });
+      }
+    } catch (e) {}
+  })();
+</script>
+</head>
