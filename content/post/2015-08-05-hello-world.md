@@ -1,6 +1,6 @@
 ---
-title: Hello World
-date: 2015-08-05
+title: Hello, World
+date: 2026-08-05
 description: Humble beginnings
 aliases: ["/2015/hello-world/"]
 ---
@@ -11,6 +11,6 @@ package main
 import "fmt"
 
 func main() {
-	fmt.Println("Hello world")
+	fmt.Println("Hello, world!")
 }
 ```

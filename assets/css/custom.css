@@ -64,3 +64,18 @@
     pointer-events: none;
   }
 }
+
+/* Post description shown under the title */
+.post-description {
+  text-align: center;
+  font-style: italic;
+  margin: 0.25rem 0 0.75rem;
+}
+
+/* Home page intro from content/_index.md */
+.home-intro {
+  text-align: center;
+  font-style: italic;
+  margin: 0.25rem 0 0.75rem;
+}
+.home-intro p { text-indent: 0; }

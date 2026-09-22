@@ -35,6 +35,14 @@
           <p class="author"><a href="{{ "/" | relURL }}">{{ .Site.Title }}</a></p>
         {{ else }}
           <h1>{{ with $title }}{{.}}{{ else }}<br/>{{ end }}</h1>
+          {{/* Site override: show the post description under the title. */}}
+          {{ if and .IsPage .Params.description }}
+            <p class="post-description">{{ .Params.description }}</p>
+          {{ end }}
+          {{/* Site override: on the home page, show the body of content/_index.md under the title. */}}
+          {{ if and .IsHome .Content }}
+            <div class="home-intro">{{ .Content }}</div>
+          {{ end }}
           {{ $author := "" }}
           {{ $abstract := "" }}
           {{ if .IsHome }}
