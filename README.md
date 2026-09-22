@@ -3,7 +3,7 @@
 Personal website and blog, built with [Hugo](https://gohugo.io/) and the
 [HugoTeX](https://github.com/kaisugi/HugoTeX) theme (LaTeX.css styling,
 server-side KaTeX). Deployed to GitHub Pages by the workflow in
-`.github/workflows/hugo.yml` on every push to `master`.
+`.github/workflows/hugo.yml` on every push to `main` (`make deploy` pushes it).
 
 ## Local development
 
